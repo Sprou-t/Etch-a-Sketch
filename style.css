@@ -1,1 +1,12 @@
 /*Use flexbox to make the ind divs into boxes*/
+/*Without applying flexbox, the default behaviour of a webpage would be 
+'block-level where all elements would just stack vertically*/
+#container {
+    display: flex;
+}
+
+.cell {
+    width: 40px; /* Adjust the width of each cell as needed */
+    height: 40px; /* Adjust the height of each cell as needed */
+    border: 1px solid black; /* Add borders to the cells */
+}
