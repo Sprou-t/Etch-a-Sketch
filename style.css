@@ -3,9 +3,13 @@
 'block-level where all elements would just stack vertically*/
 #container {
     display: flex;
+    /*set height and width such that total dimension remains constant*/
+    width: 640px;
+    height: 640px;
 }
 
 .cell {
+    /*set initial dimensions for 16x16 grid*/
     width: 40px; /* Adjust the width of each cell as needed */
     height: 40px; /* Adjust the height of each cell as needed */
     border: 1px solid black; /* Add borders to the cells */

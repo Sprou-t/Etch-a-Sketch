@@ -7,7 +7,6 @@ function grid_generator(){
     for(let i=0; i<16 ; i++){
         //create rows: need this step as we r not using array
         const row = document.createElement('div');
-        row.classList.add('row');
 
 
         for(let j=0; j <16; j++)
@@ -15,7 +14,7 @@ function grid_generator(){
             //create divs
             const cell = document.createElement('div');
            
-            //add class 
+            //add class
             cell.classList.add('cell');
 
             //append cell to row
@@ -29,8 +28,15 @@ function grid_generator(){
 
 function hover(){
 //set up a event listener when mouse passes over the grid using delegation
-    //create event for mouse to hover over
-    let hover = new Event()
+    container.addEventListener('mouseover',(event) =>{
+        let target = event.target;
+
+        //change color when mouse hovers over an element of class 'cell'
+        if (target.classList.contains('cell')){
+            target.style.backgroundColor = 'lightblue';
+        }
+    })  
 }
 
 grid_generator();
+hover();
