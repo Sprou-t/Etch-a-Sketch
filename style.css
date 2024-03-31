@@ -1,6 +1,11 @@
 /*Use flexbox to make the ind divs into boxes*/
 /*Without applying flexbox, the default behaviour of a webpage would be 
 'block-level where all elements would just stack vertically*/
+button{
+    margin:8px;
+    margin-bottom: 16px;
+}
+
 #container {
     display: flex;
     /*set height and width such that total dimension remains constant*/
@@ -9,8 +14,9 @@
 }
 
 .cell {
-    /*set initial dimensions for 16x16 grid*/
-    width: 40px; /* Adjust the width of each cell as needed */
-    height: 40px; /* Adjust the height of each cell as needed */
+    /*set css variable*/
+    --cell-size:calc(640px / 16);/*define variable first*/
+    width: var(--cell-size);
+    height: var(--cell-size);
     border: 1px solid black; /* Add borders to the cells */
 }
