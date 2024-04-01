@@ -44,15 +44,12 @@ function reset_grid(){
     //create element ref to button
     const button = document.querySelector('button');
 
-    //create input variable to escape scope issue
-    let input;
-
     //need to create own eventlistener that:
     button.addEventListener('click', function(event) {
     
         //1. prompts user for no. of sqs (limit to 100)
         while (true){ //need to change the input to int. Also change to NaN if not a no.
-            input = parseInt(prompt('How many square grids per side would you require?'));
+            let input = parseInt(prompt('How many square grids per side would you require?'));
             
             if (input<=100 && !isNaN(input)){
                 break;//i/p overwritten in every iteration so last i/p is recorded
@@ -62,6 +59,7 @@ function reset_grid(){
                 alert('Invalid input. Please enter a valid number less than 100.');
             }
         }
+        //Might be because i need to add another eventlistener to listen to the ans typed out
         
         //2. dynamically changes the no. of sqs
         //clear out the inner HTML content 
