@@ -44,13 +44,17 @@ function reset_grid(){
     //create element ref to button
     const button = document.querySelector('button');
 
+    //define input out of scope
+    let input;
+    
     //need to create own eventlistener that:
     button.addEventListener('click', function(event) {
     
         //1. prompts user for no. of sqs (limit to 100)
         while (true){ //need to change the input to int. Also change to NaN if not a no.
-            let input = parseInt(prompt('How many square grids per side would you require?'));
             
+            input = parseInt(prompt('How many square grids per side would you require?'));
+
             if (input<=100 && !isNaN(input)){
                 break;//i/p overwritten in every iteration so last i/p is recorded
             }
@@ -81,9 +85,9 @@ function reset_grid(){
                 //create divs
                 const cell = document.createElement('div');
                 
-                //set
                 //add class
-                //cell.classList.add('cell');
+                cell.classList.add('cell');
+
 
                 //append cell to row
                 row.appendChild(cell);
