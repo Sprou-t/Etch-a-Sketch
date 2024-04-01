@@ -69,7 +69,7 @@ function reset_grid(){
 
         //set the new width and height of each cell
         //alt: container.setAttribute('style', `--cell-size: calc(640px / ${input})`);
-        container.style.setProperty('--cell-size',`calc(640px / ${input})`);
+        container.style.setProperty('--cell-size',`calc(638px / ${input} )`);
 
         //establish new HTML content with the new squares
         //for loop
@@ -82,9 +82,10 @@ function reset_grid(){
             {
                 //create divs
                 const cell = document.createElement('div');
-            
+                
+                //set
                 //add class
-                cell.classList.add('cell');
+                //cell.classList.add('cell');
 
                 //append cell to row
                 row.appendChild(cell);

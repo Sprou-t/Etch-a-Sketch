@@ -9,14 +9,15 @@ button{
 #container {
     display: flex;
     /*set height and width such that total dimension remains constant*/
-    width: 640px;
-    height: 640px;
+    max-width: 640px;
+    max-height: 640px;
 }
 
 .cell {
     /*set css variable*/
-    --cell-size:calc(640px / 16);/*define variable first*/
-    width: var(--cell-size);
-    height: var(--cell-size);
+    --cell-size:calc(638px / 16);/*define variable first*/
+    width: 638px / 16;
+    height: 638px / 16;
     border: 1px solid black; /* Add borders to the cells */
+    flex: auto;
 }
