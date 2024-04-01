@@ -11,13 +11,13 @@ button{
     /*set height and width such that total dimension remains constant*/
     max-width: 640px;
     max-height: 640px;
+    border: 1px solid black;
 }
 
 .cell {
     /*set css variable*/
-    --cell-size:calc(638px / 16);/*define variable first*/
-    width: 638px / 16;
-    height: 638px / 16;
-    border: 1px solid black; /* Add borders to the cells */
+    --cell-size:calc(640px / 16);/*define variable first*/
+    width: var(--cell-size);
+    height: var(--cell-size);
     flex: auto;
 }
