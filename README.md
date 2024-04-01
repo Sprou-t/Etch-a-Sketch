@@ -2,7 +2,7 @@
 
 ## description
 -Made a Sketchpad 
-
+-Note that since inner.html is used in reset_grid(), extra precautions must be taken to deter injection attacks
 ## functions 
 # grid_generator()
 uses a nested for loop to generate an initial grid pad of 
